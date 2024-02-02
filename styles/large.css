@@ -1,0 +1,57 @@
+body header {
+  padding: 20px 9%;
+}
+body header nav {
+  display: block;
+}
+body header nav ul{
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+body header nav ul li{
+  list-style: none;
+  padding: 10px;
+  font-size: 2.5rem;
+}
+body header button {
+  display: none;
+}
+/* Portada */
+body main section {
+  max-width: 1000px;
+  flex-direction: row;
+  position: relative;
+  padding-top: 125px;
+}
+/* letter */
+body main section .letter {
+  margin-bottom: 150px;
+  padding-left: 10px;
+}
+body main section .letter > *{
+  text-align: left;
+}
+body main section h1 {
+  max-width: 900px;
+  font-size: 5.5rem;
+}
+body main section p {
+  font-size: 1.7rem;
+}
+/* Tierra */
+body main section .circulo {
+  position: absolute;
+  right: -7%;
+  top: 80px;
+  width: 400px;
+  height: 400px;
+  z-index: -1;
+}
+/* Sección de búsqueda */
+body main .search {
+  width: 3000px;
+}
