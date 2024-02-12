@@ -115,6 +115,19 @@ function filtrarPorKeyword(valorInput) {
   return resultados;
 }
 
+//Función que escoge el valor de cada anchor al hacer click
+function referenciaAnchor(listaAnchor) {
+  listaAnchor.forEach(function(anchor) {
+    anchor.addEventListener('click', function() {
+      var textoEnlace = anchor.textContent;
+      let keyToken = localStorage.getItem('keyToken');
+      keyToken = textoEnlace;
+      localStorage.setItem('keyToken', keyToken);
+      console.log(keyToken);
+    });
+  });
+};
+
 //Función que renderiza el historial de búsquedas
 function mostrarHistorial() {
   var nuevoDivExistencia = document.getElementsByClassName("search-respuesta")[0];
@@ -144,12 +157,15 @@ function mostrarHistorial() {
       var nuevoP = document.createElement("a");
       nuevoP.className = "search-respuesta-item-text";
       nuevoP.textContent = element;
-      nuevoP.href = "#";
+      nuevoP.href = "../../findings/findings.html";
 
       nuevoPContenedor.appendChild(itemLogo);
       nuevoPContenedor.appendChild(nuevoP);
       nuevoDiv.appendChild(nuevoPContenedor);
     });
+    
+    const listaAnchor = document.querySelectorAll('.search-respuesta-item-text');
+    referenciaAnchor(listaAnchor);
 };
 
 //Función para renderizar coincidencias de búsqueda
@@ -219,8 +235,11 @@ searchBar.addEventListener('keyup', function(event) {
 //remove del historial y coincidencias en la barra de búsqueda
 searchBar.addEventListener('focusout', function() {
   var nuevoDiv = document.getElementsByClassName("search-respuesta")[0];
+  //Settimeout para que no se borre el historial al hacer click en un anchor
   if (nuevoDiv) {
-    nuevoDiv.remove();
+    setTimeout(function() {
+      nuevoDiv.remove();
+    }, 100);
   }
 });
 
