@@ -6,12 +6,6 @@
   text-decoration: none;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  color: white;
-}
-body {
-  background-color: #000; /* Color de fondo oscuro */
-  background-image: linear-gradient(to bottom, #000 0%, #6a00b5 100%); /* Gradiente de negro a azul-morado */
-  animation: cambioDeColor 3s infinite alternate; /* Animación de cambio de color */
 }
 body::-webkit-scrollbar
 {
@@ -26,7 +20,6 @@ body::-webkit-scrollbar-thumb
 }
 body header {
   width: 100%;
-  padding: 0% 5%;
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -46,6 +39,7 @@ body header .logo-aimg a {
   font-family: 'Tourney', sans-serif;
   font-size: 2.5rem;
   padding: 5px;
+  color: white;
 }
 body header .logo-aimg a img{
   width: auto;
@@ -60,37 +54,45 @@ body header button {
   height: 25px;
 }
 
-body main {
+body .portada-container {
   width: 100%;
-  height: 100%;
+  height: 600px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
-  position: relative;
-  margin-top: 150px;
+  background-color: #000;
+  background-image: linear-gradient(to bottom, #000 0%, #3a0064 100%);
 }
-body main section {
+body .portada-container .portada {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .portada-container .portada section {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
   z-index: 1;
+  position: relative;
+  padding: 0px 10px;
 }
-body main section h1 {
-  font-size: 3.5rem;
+body .portada-container .portada section h1 {
+  font-size: 2.5rem;
   font-weight: 800;
   text-align: center;
-  padding: 10px 0px;
+  color: white;
 }
-body main section p {
+body .portada-container .portada section p {
   padding-top: 10px;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: rgb(194, 194, 194);
   text-align: center;
 }
-body main section .planeta {
+body .portada-container .portada section .planeta {
   background-image: url("../assets/img/tierra.jpg");
   background-size: cover;
   border: 2px solid rgba(120, 90, 185, 0.48);
@@ -118,38 +120,56 @@ body main section .planeta {
   100% { background-position:0 100% }
 }
 
+body main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 478px;
+}
 body main .search {
-  width: 1500px;
-  height: 1000px;
-  border-radius: 50% 50% 0 0;
-  background: rgb(255,255,255);
-background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(106,0,181,1) 51%, rgba(0,0,0,1) 100%);
-background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(106,0,181,1) 51%, rgba(0,0,0,1) 100%);
-background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(106,0,181,1) 51%, rgba(0,0,0,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
-  padding-top: 30px;
+  width: 100%;
   display: flex;
   flex-direction: column; 
+  align-items: center;
 }
-body main .search .consejo {
+body main .search .search-core {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../assets/img/rect2.svg');
+  background-size: 200%;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: relative;
+}
+body main .search .search-core .consejo {
   max-width: 550px;
   width: calc(100vw - 2%);
-  font-size: 1.2rem;
-  padding: 10px;
-  align-self: center;
+  padding: 15px 10px 5px 0;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
 }
-body main .search .consejo .relleno {
-  width: 100%;
-}
-body .search .consejo p {
+body .search .search-core .consejo p {
   color: #000;
   font-size: 1.2rem;
   font-weight: 200;
   white-space: nowrap;
+  margin-right: 40px;
 }
-body main .search .search-container {
+body main .search .search-core .searcheable-fill {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding-bottom: 5px;
+}
+body main .search .search-core .searcheable-fill .search-container {
   max-width: 550px;
   width: calc(100vw - 2%);
   height: auto;
@@ -161,11 +181,9 @@ body main .search .search-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  align-self: center;
   flex-wrap: wrap;
-  overflow: hidden;
 }
-body main .search .search-container input {
+body main .search .search-core .searcheable-fill .search-container input {
   width: 90%;
   height: 50px;
   border: none;
@@ -175,7 +193,7 @@ body main .search .search-container input {
   background-color: #f5f5f500;
   padding-left: 15px;
 }
-body main .search .search-container button {
+body main .search .search-core .searcheable-fill .search-container button {
   width: 5%;
   border: none;
   border-radius: 25%;
@@ -183,7 +201,7 @@ body main .search .search-container button {
   transition: background-color 1.5s ease;
   margin-right: 10px;
 }
-body main .search .search-container button:hover {
+body main .search .search-core .searcheable-fill .search-container button:hover {
   cursor: pointer;
   background-color: rgb(44,113,3);
   background-color: -moz-radial-gradient(circle, rgba(44,113,3,1) 19%, rgba(255,255,255,0) 97%);
@@ -191,26 +209,26 @@ body main .search .search-container button:hover {
   background-color: radial-gradient(circle, rgba(44,113,3,1) 19%, rgba(255,255,255,0) 97%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2c7103",endColorstr="#ffffff",GradientType=1);
 }
-body main .search .search-container button::placeholder {
+body main .search .search-core .searcheable-fill .search-container button::placeholder {
   color: white;
   font-size: 1rem;
 }
-body main .search .search-container button svg {
+body main .search .search-core .searcheable-fill .search-container button svg {
   filter: invert(1);
 }
-body main .search .search-container .search-respuesta {
+body main .search .search-core .searcheable-fill .search-container .search-respuesta {
   height: auto;
   display: flex;
   flex-direction: column;
   padding-bottom: 5px;
   width: 100%;
 }
-body main .search .search-container .search-respuesta p {
+body main .search .search-core .searcheable-fill .search-container .search-respuesta p {
   font-size: 1.5rem;
   color: white;
   padding: 7px 10px;
 }
-body main .search .search-container .search-respuesta .recent-searches {
+body main .search .search-core .searcheable-fill .search-container .search-respuesta .recent-searches {
   border-radius: 5px;
   color: #A6A9E3;
   background-color: #222222;
@@ -221,23 +239,97 @@ body main .search .search-container .search-respuesta .recent-searches {
   font-size: 1.1rem;
   width: 150px
 }
-body main .search .search-container .search-respuesta .search-respuesta-item {
+body main .search .search-core .searcheable-fill .search-container .search-respuesta .search-respuesta-item {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding-left: 10px;
 }
-body main .search .search-container .search-respuesta .search-respuesta-item:hover {
+body main .search .search-core .searcheable-fill .search-container .search-respuesta .search-respuesta-item:hover {
   background-color: #454545;
 }
-body main .search .search-container .search-respuesta .search-respuesta-item .search-respuesta-item-text {
+body main .search .search-core .searcheable-fill .search-container .search-respuesta .search-respuesta-item .search-respuesta-item-text {
   font-size: 1.5rem;
   color: white;
   padding: 10px;
   text-decoration: none;
   width: 100%;
 }
-body main .search .search-container .search-respuesta .search-respuesta-item .search-respuesta-item-logo {
+body main .search .search-core .searcheable-fill .search-container .search-respuesta .search-respuesta-item .search-respuesta-item-logo {
   width: 17px;
   filter: invert(0.7);
+}
+body main .search .capacidades-container {
+  width: 100%;
+  height: auto;
+  background: rgb(255,255,255);
+  background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(117,59,230,1) 15%, rgba(71,71,171,1) 32%, rgba(81,17,124,1) 59%, rgba(20,2,33,1) 89%, rgba(15,94,0,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(117,59,230,1) 15%, rgba(71,71,171,1) 32%, rgba(81,17,124,1) 59%, rgba(20,2,33,1) 89%, rgba(15,94,0,1) 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(117,59,230,1) 15%, rgba(71,71,171,1) 32%, rgba(81,17,124,1) 59%, rgba(20,2,33,1) 89%, rgba(15,94,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#0f5e00",GradientType=1);
+}
+body main .search .capacidades-container .capacidades-container-refill {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../assets/img/G_Linea.png');
+  background-size: cover;
+}
+body main .search .capacidades-container .capacidades {
+  width: 100%;
+  padding-top: 20px;
+}
+body main .search .capacidades-container .capacidades ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+body main .search .capacidades-container .capacidades ul li {
+  width: 280px;
+  height: 320px;
+  border-radius: 15px;
+  background-color: #2b2b2b73;
+  color: white;
+  list-style: none;
+  font-size: 2rem;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+body main .search .capacidades-container .capacidades ul li img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+body main .search .capacidades-container .capacidades ul li h4 {
+  font-size: 2rem;
+  padding: 10px;
+  text-align: center;
+}
+body main .search .capacidades-container .capacidades ul li p {
+  font-size: 1.5rem;
+  padding: 10px;
+  text-align: justify;
+}
+body main .search .capacidades-container .capacidades-verbose {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 30px;
+}
+body main .search .capacidades-container .capacidades-verbose h2 {
+  font-size: 2.6rem;
+  color: rgb(255, 255, 255);
+  padding: 10px 30px;
+  text-align: center;
+}
+body main .search .capacidades-container .capacidades-verbose p {
+  font-size: 1.4rem;
+  padding-top: 20px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-bottom: 1000px;
 }

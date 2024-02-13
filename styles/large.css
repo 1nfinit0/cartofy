@@ -18,45 +18,53 @@ body header nav ul li{
   padding: 0 10px;
   font-size: 2.5rem;
 }
+body header nav ul li a{
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0);
+}
 body header button {
   display: none;
 }
 /* Portada */
-body main section {
+body .portada-container {
+  height: 700px;
+}
+body .portada-container .portada {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+body .portada-container .portada section {
   max-width: 1000px;
   flex-direction: row;
-  position: relative;
   padding-top: 70px;
 }
-body main section .planeta {
-  margin-top: -20px;
-}
 /* letter */
-body main section .letter {
-  margin-bottom: 150px;
-  padding-left: 10px;
-}
-body main section .letter > *{
+body .portada-container .portada section .letter > *{
   text-align: left;
 }
-body main section h1 {
+body .portada-container .portada section h1 {
   max-width: 900px;
   font-size: 5.5rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) ;
 }
-body main section p {
+body .portada-container .portada section p {
   font-size: 1.7rem;
 }
 /* Tierra */
-body main section .planeta {
+body .portada-container .portada section .planeta {
   position: absolute;
-  right: -7%;
-  top: 80px;
+  right: -15%;
+  top: -5%;
   width: 400px;
   height: 400px;
   z-index: -1;
 }
 /* Sección de búsqueda */
-body main .search {
-  width: 3000px;
+body main {
+  top: 550px;
+}
+body main .search .search-core {
+  background-size: 150%;
+  background-position: top;
 }

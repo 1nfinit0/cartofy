@@ -133,7 +133,7 @@ function mostrarHistorial() {
   var nuevoDivExistencia = document.getElementsByClassName("search-respuesta")[0];
     if (nuevoDivExistencia) {
       nuevoDivExistencia.remove();
-    }
+    };
   var newHistory = recorteHistorial();
   //Creación de la estructura del historial
   var nuevoDiv = document.createElement("div");
@@ -163,7 +163,6 @@ function mostrarHistorial() {
       nuevoPContenedor.appendChild(nuevoP);
       nuevoDiv.appendChild(nuevoPContenedor);
     });
-    
     const listaAnchor = document.querySelectorAll('.search-respuesta-item-text');
     referenciaAnchor(listaAnchor);
 };
