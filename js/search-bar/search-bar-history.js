@@ -52,9 +52,13 @@ boton.addEventListener('click', function() {
 
 //Desplazamiento al hacer focus en la barra de búsqueda
 searchBar.addEventListener('focus', function() {
-  var posicionDesplazamiento = searchBar.getBoundingClientRect().top + window.scrollY - 170;
-  window.scrollTo({ top: posicionDesplazamiento, behavior: 'smooth' });
+  var posicionDesplazamiento = searchBar.getBoundingClientRect().top + window.scrollY;
+  var espacioAdicional = 106; // Ajusta según sea necesario
+  setTimeout(function() {
+    window.scrollTo({ top: posicionDesplazamiento - espacioAdicional, behavior: 'smooth' });
+  }, 200); // setTimeout con la función dentro de las llaves y el tiempo después de la coma
 });
+
 
 //Función que busca coincidencias en la base de datos
 function filtrarPorKeyword(valorInput) {
@@ -205,7 +209,7 @@ searchBar.addEventListener('focus', function() {
   if (searchBar.value === '' && newHistory.length > 0) {
     mostrarHistorial();
   }
-  else {
+  else if (searchBar.value != ''){
     const busquedaRealTime = searchBar.value;
     var coincidencias = filtrarPorKeyword(busquedaRealTime);
     mostrarCoincidencias(coincidencias);
