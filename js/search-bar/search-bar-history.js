@@ -56,7 +56,7 @@ searchBar.addEventListener('focus', function() {
   var espacioAdicional = 106; // Ajusta según sea necesario
   setTimeout(function() {
     window.scrollTo({ top: posicionDesplazamiento - espacioAdicional, behavior: 'smooth' });
-  }, 200); // setTimeout con la función dentro de las llaves y el tiempo después de la coma
+  }, 300); // setTimeout con la función dentro de las llaves y el tiempo después de la coma
 });
 
 

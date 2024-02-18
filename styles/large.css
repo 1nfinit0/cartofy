@@ -1,6 +1,12 @@
 body .header-portada-search-container header {
   padding: 5px 6%;
 }
+body .header-portada-search-container header .logo-aimg a {
+  font-size: 2.5rem;
+}
+body .header-portada-search-container header .logo-aimg a img{
+  height: 60px;
+}
 body .header-portada-search-container header nav {
   display: block;
 }
@@ -21,6 +27,10 @@ body .header-portada-search-container header nav ul li a{
   color: white;
   text-decoration: none;
   text-shadow: 1px 1px 5px rgb(0, 0, 0);
+}
+body .header-portada-search-container header nav ul li a:hover{
+  color: #9340e0;
+  text-shadow: 1px 1px 5px rgb(180, 9, 196);
 }
 body .header-portada-search-container header button {
   display: none;
@@ -63,6 +73,9 @@ body main .search-core  {
   position: absolute;
   top: 510px;
 }
+body main .search-core .consejo p {
+  font-weight: 400;
+}
 body main .search-core .searcheable-fill .search-container {
   width: calc(100vw - 2%);
 }
@@ -71,9 +84,47 @@ body main .capacidades-container  {
   margin-top: 0px;
   padding-top: 70px;
 }
-body main .capacidades-container .capacidades-container-refill .capacidades-verbose  {
-  padding-top: 80px;
+body main .capacidades-container .capacidades-container-refill .capacidades ul li img {
+  filter: invert(1) brightness(0.3) contrast(1.5);
 }
+body main .capacidades-container .capacidades-container-refill .capacidades-verbose {
+  padding-top: 95px;
+}
+body main .capacidades-container .capacidades-container-refill .capacidades-verbose h3 {
+  color: #eeff00;
+}
+
 body main .capacidades-container .capacidades-container-refill .capacidades-verbose h2 {
   font-size: 2.7rem;
+}
+body main .contribuye-container .contribuye .contribuye-info {
+  width: 50%;
+}
+body main .contribuye-container .contribuye .contribuye-img {
+  width: 50%;
+  min-width: 400px;
+  max-width: 600px;
+}
+body main .contribuye-container .contribuye .contribuye-info h2 {
+  font-size: 6rem;
+}
+body main .contribuye-container .contribuye .contribuye-info p {
+  font-size: 2rem;
+}
+footer .desarrollador-container .dev p {
+  font-size: 1.3rem;
+}
+footer .desarrollador-container .dev img {
+  width: 60px;
+  height: 60px;
+}
+footer .desarrollador-container ul li {
+  padding: 0px 25px;
+}
+footer .desarrollador-container ul li a img{
+  width: 30px;
+  height: 30px;
+}
+footer .dominio-container p {
+  font-size: 1.5rem;
 }

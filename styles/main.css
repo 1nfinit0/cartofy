@@ -7,6 +7,9 @@
   font-family: 'Inter', sans-serif;
   font-weight: 400;
 }
+html {
+  scroll-behavior: smooth;
+}
 body::-webkit-scrollbar {
 	width: 12px;
 	background-color: #f5f5f500;
@@ -31,7 +34,12 @@ body .header-portada-search-container header {
   z-index: 999;
   backdrop-filter: blur(7px);
   text-shadow: 1px 1px 5px rgb(0, 0, 0);
+  padding: 0px 15px;
 }
+body .header-portada-search-container header {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 1px 8px rgba(0, 0, 0, 0.4);
+}
+
 body .header-portada-search-container header .logo-aimg a {
   width: auto;
   height: auto;
@@ -39,13 +47,13 @@ body .header-portada-search-container header .logo-aimg a {
   align-items: center;
   flex-direction: row;
   font-family: 'Tourney', sans-serif;
-  font-size: 2.5rem;
-  padding: 5px;
+  font-size: 2rem;
+  padding: 5px 0px;
   color: white;
 }
 body .header-portada-search-container header .logo-aimg a img{
   width: auto;
-  height: 60px;
+  height: 50px;
   padding: 10px;
 }
 body .header-portada-search-container header nav{
@@ -129,8 +137,7 @@ body .header-portada-search-container .search {
 }
 body main {
   width: 100%;
-  height: 1000px;
-  background-image: url('../assets/img/G_Linea.png'), linear-gradient(180deg, rgb(255, 255, 255) 1%, rgb(37, 13, 92) 35%, #3a0064 100%);
+  background-image: url('../assets/img/G_Linea.png'), linear-gradient(180deg, rgb(255, 255, 255) 0%,rgb(136, 103, 190) 15%, rgb(37, 13, 92) 75%, #0d0016 100%);
   background-size: cover;
 }
 body main .search-core {
@@ -152,11 +159,11 @@ body main .search-core .consejo {
   justify-content: flex-end;
 }
 body main .search-core .consejo p {
-  color: #000;
+  color: #5a5a5a;
   font-size: 1.2rem;
-  font-weight: 200;
   white-space: nowrap;
   margin-right: 40px;
+  font-weight: 200;
 }
 body main .search-core .searcheable-fill {
   width: 100%;
@@ -241,7 +248,7 @@ body main .search-core .searcheable-fill .search-container .search-respuesta .se
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-left: 10px;
+  padding: 1px 2px 1px 10px;
 }
 body main .search-core .searcheable-fill .search-container .search-respuesta .search-respuesta-item:hover {
   background-color: #454545;
@@ -263,7 +270,7 @@ body main .search-core .searcheable-fill .search-container .search-respuesta .se
 body main .capacidades-container {
   width: 100%;
   height: auto;
-  margin-top: -90px;
+  margin-top: -80px;
 }
 body main .capacidades-container .capacidades-container-refill {
   width: 100%;
@@ -272,7 +279,7 @@ body main .capacidades-container .capacidades-container-refill {
   align-items: center;  
 }
 body main .capacidades-container .capacidades-container-refill .capacidades {
-  max-width: 650px;
+  max-width: 1000px;
   width: 100%;
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
@@ -294,37 +301,271 @@ body main .capacidades-container .capacidades-container-refill .capacidades ul l
   align-items: center;
 }
 body main .capacidades-container .capacidades-container-refill .capacidades ul li img {
-  width: 100%;
+  width: 90%;
   height: 100%;
   border-radius: 15px;
-  filter: invert(1) brightness(0.4) contrast(1.5);
+  filter: invert(1) brightness(0.3) contrast(1.5);
 }
 body main .capacidades-container .capacidades-container-refill .capacidades ul li h4 {
-  color: rgb(255, 238, 0);
-  font-size: 1.6rem;
+  color: rgb(255, 255, 255);
+  font-size: 1.4rem;
   text-align: center;
-  font-weight: 800;
-  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
 body main .capacidades-container .capacidades-container-refill .capacidades-verbose {
   width: 100%;
-  padding: 10px 10px;
+  padding: 20px 10px 30px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+body main .capacidades-container .capacidades-container-refill .capacidades-verbose h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #3ca3de;
+  padding-top: 10px;
+  text-shadow: 1px 1px 2px rgb(124, 126, 27);
+}
 body main .capacidades-container .capacidades-container-refill .capacidades-verbose h2 {
   max-width: 800px;
   font-size: 2.3rem;
-  color: rgb(255, 255, 255);
-  padding: 10px 30px;
+  color: rgb(243, 249, 255);
+  padding: 0px 30px;
   text-align: center;
-  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  text-shadow: 1px 1px 10px rgb(6, 15, 95);
 }
 body main .capacidades-container .capacidades-container-refill .capacidades-verbose p {
   max-width: 1000px;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: rgb(255, 255, 255);
   text-align: center;
   padding-top: 20px;
+}
+body main .chip-recientes-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #0000007e;
+  padding: 0px 10px;
+  padding-bottom: 10px;
+}
+body main .chip-recientes-container .ultimos-tittle {
+  width: 100%;
+  padding: 5px 0px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  border-radius: 5px;
+}
+body main .chip-recientes-container .ultimos-tittle h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: white;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0);
+}
+body main .chip-recientes-container .ultimos-container {
+  width: 100%;
+  padding: 5px;
+}
+body main .chip-recientes-container .ultimos-container .ultimos-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow-x: auto;
+}
+body main .chip-recientes-container .ultimos-container .ultimos-content .card {
+  width: 20%;
+  min-width: 290px;
+  height: 250px;
+  border-radius: 10px;
+  margin: auto 5px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+body main .chip-recientes-container .ultimos-container .ultimos-content .card .card-text {
+  width: 100%;
+  height: 50px;
+  background-color: #0000007e;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+body main .chip-recientes-container .ultimos-container .ultimos-content .card .card-text h3 {
+  font-size: 1.6rem;
+  color: white;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0);
+  text-overflow: ellipsis;
+}
+body main .chip-recientes-container .ultimos-container .ultimos-content .card-more {
+  min-width: 180px;
+  height: 250px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body main .chip-recientes-container .ultimos-container .ultimos-content .card-more a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url('../assets/arrow-up-right-svgrepo-com.svg');
+  background-size: cover;
+  filter: invert(1);
+  background-color: #24bb2e88;
+}
+body main .chip-recientes-container .ultimos-container .ultimos-content .card-more a:hover {
+  background-color: #9415ba;
+}
+body main .chip-recientes-container .ultimos-container .ultimos-content .card-more  h3 {
+  font-size: 1.3rem;
+  color: white;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0);
+  padding-top: 10px;
+
+}
+body main .contribuye-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0px;
+}
+body main .contribuye-container .contribuye {
+  max-width: 1100px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 10px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+body main .contribuye-container .contacta {
+  direction: rtl;
+}
+body main .contribuye-container .contribuye .contribuye-info {
+  width: 80%;
+  height: 100%;
+  padding: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  position: relative;
+  z-index: 99;
+}
+body main .contribuye-container .contribuye .contribuye-info > * {
+  margin: 10% 0px;
+}
+body main .contribuye-container .contribuye .contribuye-info h2 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0);
+}
+body main .contribuye-container .contribuye .contribuye-info p {
+  max-width: 500px;
+  font-size: 1.5rem;
+  color: rgb(231, 231, 231);
+  text-shadow: 1px 1px 5px rgb(0, 0, 0);
+}
+body main .contribuye-container .contribuye .contribuye-info a {
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: #905bb6;
+  border: solid 1px #ffffff;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+body main .contribuye-container .contribuye .contribuye-info a:hover {
+  background-color: #1e9957;
+}
+body main .contribuye-container .contribuye .contribuye-info a span {
+  font-size: 1.3rem;
+  color: white;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0);
+}
+body main .contribuye-container .contribuye .contribuye-img {
+  width: 30%;
+  min-width: 300px;
+  max-width: 600px;
+}
+body main .contribuye-container .contribuye .contribuye-img img {
+  width: 100%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+/* Footer */
+footer {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: #0D0017;
+  align-items: center;
+  justify-content: space-evenly;
+}
+footer .logo-container {
+  height: auto;
+  display: flex;
+}
+footer .logo-container img {
+  filter: grayscale(1);
+  width: 30px;
+}
+footer .desarrollador-container {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+footer .desarrollador-container .dev {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 5px;
+}
+footer .desarrollador-container .dev p {
+  font-size: 1.1rem;
+  color: white;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0);
+  padding-bottom: 5px;
+}
+footer .desarrollador-container .dev img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+footer .desarrollador-container ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0px;
+}
+footer .desarrollador-container ul li {
+  padding: 0px 15px;
+}
+footer .desarrollador-container ul li a img{
+  width: 15px;
+  height: 15px;
+  filter: invert(1);
+}
+footer .dominio-container {
+  height: auto;
+  display: flex;
+}
+footer .dominio-container p {
+  font-size: 1.2rem;
+  color: white;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
