@@ -1,10 +1,10 @@
 export const geodb = [
   {
     id: 1,
-    titulo: 'Perú - Límite Nacional',
-    descripcion: 'Límite nacional del Perú, frontera con Ecuador, Colombia, Brasil, Bolivia y Chile.',
-    fuente: '',
-    keyword: ['peru', 'limite', 'frontera', 'boundaries', 'internacional', 'politico'],
+    titulo: 'Perú - Límite Internacional',
+    descripcion: 'Límite nacional del Perú, frontera con Ecuador, Colombia, Brasil, Bolivia, Chile y Océano Pacífico.',
+    fuente: 'INEI 2022',
+    keyword: ['peru', 'limite', 'frontera', 'boundaries', 'internacional', 'politico', 'ign', 'inei'],
     categoria: 'Geopolitica',
     img: '#/../..',
     cosulta: '#',
