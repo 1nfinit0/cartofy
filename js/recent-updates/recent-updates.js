@@ -9,7 +9,7 @@ const ultimosContent = document.getElementsByClassName('ultimos-content')[0];
 recentUpdates.forEach((update) => {
   const card = document.createElement('div');
   card.classList.add('card');
-  card.style.backgroundImage = `url("../../assets/shape.jpg")`;
+  card.style.backgroundImage = `url("${update.img}")`;
   card.innerHTML = `
     <div class="card-text">
       <h3>${update.titulo}</h3>
