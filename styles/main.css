@@ -58,10 +58,50 @@ body .header-portada-search-container header .logo-aimg a img{
 }
 body .header-portada-search-container header nav{
   display: none;
+  width: auto;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+/* Estilos del nav oculto (movil) */
+body .header-portada-search-container header nav ul{
+  background-color: white;
+  border-radius: 10px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: 10px;
+}
+body .header-portada-search-container header nav ul li{
+  list-style: none;
+  padding: 0 10px;
+  font-size: 2.5rem;
+}
+body .header-portada-search-container header nav ul li a{
+  color: rgb(63, 63, 63);
+  text-shadow: none;
+  text-decoration: none;
+}
+body .header-portada-search-container header nav ul li a:hover{
+  color: #9340e0;
+  text-shadow: 1px 1px 5px rgb(180, 9, 196);
 }
 body .header-portada-search-container header button {
-  width: 25px;
-  height: 25px;
+  background: none;
+  background-image: url('../assets/img/menu-svgrepo-com.svg');
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border: none;
+  filter: invert(1);
+  border-radius: 5px;
+  background-color: #ffffff14;
 }
 body .header-portada-search-container .portada-container {
   width: 100%;

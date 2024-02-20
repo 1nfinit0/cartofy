@@ -9,6 +9,9 @@ body .header-portada-search-container header .logo-aimg a img{
 }
 body .header-portada-search-container header nav {
   display: block;
+  position: initial;
+  width: auto;
+  margin: 0px 0px;
 }
 body .header-portada-search-container header nav ul{
   width: auto;
@@ -17,6 +20,7 @@ body .header-portada-search-container header nav ul{
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  background-color: rgba(255, 255, 255, 0);
 }
 body .header-portada-search-container header nav ul li{
   list-style: none;

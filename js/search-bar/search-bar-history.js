@@ -250,6 +250,7 @@ searchBar.addEventListener('focusout', function() {
 searchBar.addEventListener('keydown', function(event) {
   var nuevoDiv = document.getElementsByClassName("search-respuesta")[0];
   if (nuevoDiv && event.key === 'Escape') {
+    searchBar.blur();
     nuevoDiv.remove();
   }
 });
