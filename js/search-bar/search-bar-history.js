@@ -161,7 +161,7 @@ function mostrarHistorial() {
       var nuevoP = document.createElement("a");
       nuevoP.className = "search-respuesta-item-text";
       nuevoP.textContent = element;
-      nuevoP.href = "../../findings/findings.html";
+      nuevoP.href = "../../findings/findings.html"+'?key='+element;
 
       nuevoPContenedor.appendChild(itemLogo);
       nuevoPContenedor.appendChild(nuevoP);
