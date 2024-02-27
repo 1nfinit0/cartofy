@@ -80,7 +80,7 @@ body main .search-core  {
 body main .search-core .consejo p {
   font-weight: 400;
 }
-body main .search-core .searcheable-fill .search-container {
+body header .search .search-container {
   width: calc(100vw - 2%);
 }
 /* Capacidades */

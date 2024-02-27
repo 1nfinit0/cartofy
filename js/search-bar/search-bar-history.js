@@ -32,7 +32,7 @@ searchBar.addEventListener('keydown', function(event) {
           let keyToken = localStorage.getItem('keyToken');
           keyToken = busqueda;
           localStorage.setItem('keyToken', keyToken);
-          window.location.href = "../../findings/findings.html";
+          window.location.href = "../../findings/findings.html"+'?key='+keyToken;
         }
   }
 });
@@ -45,7 +45,7 @@ boton.addEventListener('click', function() {
           let keyToken = localStorage.getItem('keyToken');
           keyToken = busqueda;
           localStorage.setItem('keyToken', keyToken);
-          window.location.href = "../../findings/findings.html";
+          window.location.href = "../../findings/findings.html"+'?key='+keyToken;
       }
   }
 );
@@ -61,7 +61,7 @@ searchBar.addEventListener('focus', function() {
 
 
 //Función que busca coincidencias en la base de datos
-function filtrarPorKeyword(valorInput) {
+export function filtrarPorKeyword(valorInput) {
   // Normalizar el valor del input (quitar tildes, signos de puntuación y espacios)
   const valorNormalizado = valorInput
     .normalize("NFD")
@@ -119,6 +119,7 @@ function filtrarPorKeyword(valorInput) {
   return resultados;
 }
 
+
 //Función que escoge el valor de cada anchor al hacer click
 function referenciaAnchor(listaAnchor) {
   listaAnchor.forEach(function(anchor) {
@@ -127,7 +128,6 @@ function referenciaAnchor(listaAnchor) {
       let keyToken = localStorage.getItem('keyToken');
       keyToken = textoEnlace;
       localStorage.setItem('keyToken', keyToken);
-      console.log(keyToken);
     });
   });
 };
@@ -211,7 +211,7 @@ searchBar.addEventListener('focus', function() {
   }
   else if (searchBar.value != ''){
     const busquedaRealTime = searchBar.value;
-    var coincidencias = filtrarPorKeyword(busquedaRealTime);
+    var coincidencias = filtrarPorKeyword(busquedaRealTime).slice(0, 7);
     mostrarCoincidencias(coincidencias);
   }
 });
@@ -230,7 +230,7 @@ searchBar.addEventListener('keyup', function(event) {
   }
   else {
     const busquedaRealTime = searchBar.value;
-    var coincidencias = filtrarPorKeyword(busquedaRealTime);
+    var coincidencias = filtrarPorKeyword(busquedaRealTime).slice(0, 7);
     mostrarCoincidencias(coincidencias);
   }
 });
