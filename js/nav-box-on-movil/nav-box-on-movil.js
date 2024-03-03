@@ -7,9 +7,9 @@ navButton.addEventListener('click', () => {
 
   if (displayPropertyValue === 'none') {
     navBox.style.display = 'block';
-    navButton.style.backgroundImage = 'url(../../assets/img/close-svgrepo-com.svg)';
+    navButton.style.backgroundImage = 'url(./assets/img/close-svgrepo-com.svg)';
   } else {
     navBox.style.display = 'none';
-    navButton.style.backgroundImage = 'url(../../assets/img/menu-svgrepo-com.svg)';
+    navButton.style.backgroundImage = 'url(./assets/img/menu-svgrepo-com.svg)';
   }
 });

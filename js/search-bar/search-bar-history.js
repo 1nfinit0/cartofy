@@ -6,10 +6,20 @@ const searchContainer = document.querySelector('.search-container');
 //BD
 import { geodb } from '../db/geodb.js';
 
-
+// Inherente a la creación de una variable en caché
 const searchHistoryKey = '';
-
 let searchHistory = JSON.parse(localStorage.getItem(searchHistoryKey)) || [];
+
+//Mausquerramienta misteriosa que nos ayudará más tarde (esto es para mí)
+let baseURL;
+if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    // Entorno local
+    baseURL = "/";
+} else {
+    // Entorno de producción
+    baseURL = "/cartofy/";
+}
+
 
 //Función que guarda la búsqueda en el historial
 function guardarBusqueda(busqueda) {
@@ -32,7 +42,7 @@ searchBar.addEventListener('keydown', function(event) {
           let keyToken = localStorage.getItem('keyToken');
           keyToken = busqueda;
           localStorage.setItem('keyToken', keyToken);
-          window.location.href = "/findings/findings.html"+'?key='+keyToken;
+          window.location.href = baseURL+ "findings/findings.html"+'?key='+keyToken;
         }
   }
 });
@@ -45,7 +55,7 @@ boton.addEventListener('click', function() {
           let keyToken = localStorage.getItem('keyToken');
           keyToken = busqueda;
           localStorage.setItem('keyToken', keyToken);
-          window.location.href = "/findings/findings.html"+'?key='+keyToken;
+          window.location.href = baseURL+ "findings/findings.html"+'?key='+keyToken;
       }
   }
 );
@@ -156,12 +166,12 @@ function mostrarHistorial() {
 
       var itemLogo = document.createElement("img");
       itemLogo.className = "search-respuesta-item-logo";
-      itemLogo.src = "/assets/history-svgrepo-com.svg";
+      itemLogo.src = baseURL+"assets/history-svgrepo-com.svg";
 
       var nuevoP = document.createElement("a");
       nuevoP.className = "search-respuesta-item-text";
       nuevoP.textContent = element;
-      nuevoP.href = "/findings/findings.html"+'?key='+element;
+      nuevoP.href = baseURL+"findings/findings.html"+'?key='+element;
 
       nuevoPContenedor.appendChild(itemLogo);
       nuevoPContenedor.appendChild(nuevoP);
@@ -188,7 +198,7 @@ function mostrarCoincidencias(coincidencias) {
 
       var itemLogo = document.createElement("img");
       itemLogo.className = "search-respuesta-item-logo";
-      itemLogo.src = "/assets/search-svgrepo-com.svg";
+      itemLogo.src = baseURL+"assets/search-svgrepo-com.svg";
 
       var nuevoP = document.createElement("a");
       nuevoP.className = "search-respuesta-item-text";
