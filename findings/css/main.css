@@ -172,6 +172,7 @@ body header .search .search-container .search-respuesta .search-respuesta-item .
 body main {
   width: 100%;
   height: auto;
+  min-height: calc(100vh - 300px);
   display: flex;
   flex-direction: column;
   padding: 60px 2%;

@@ -1,13 +1,12 @@
 // Usando la función que devuelve las conicidencias en un array de objetos:
 import { filtrarPorKeyword } from '../../../js/search-bar/search-bar-history.js';
+
 // Obtener el parámetro de consulta de la URL
 const urlParams = new URLSearchParams(window.location.search);
 const parametroUrl = urlParams.get('key');
+
+// Obtener las coincidencias de la base de datos
 const matches = filtrarPorKeyword(parametroUrl);
-
-
-// Mostrando en consola el array de objetos con las coincidencias
-console.log(matches);
 
 //Renderizado de coincidencias en section
 function renderMatches(matches) {

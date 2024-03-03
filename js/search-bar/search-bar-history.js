@@ -23,7 +23,7 @@ function recorteHistorial() {
   return newHistory; 
 }
 
-//Guardado de la búsqueda al hacer enter
+//Guardado de la búsqueda y redirige al hacer enter
 searchBar.addEventListener('keydown', function(event) {
   if (event.key === 'Enter') {
       const busqueda = this.value.trim();
@@ -32,7 +32,7 @@ searchBar.addEventListener('keydown', function(event) {
           let keyToken = localStorage.getItem('keyToken');
           keyToken = busqueda;
           localStorage.setItem('keyToken', keyToken);
-          window.location.href = "../../findings/findings.html"+'?key='+keyToken;
+          window.location.href = "/findings/findings.html"+'?key='+keyToken;
         }
   }
 });
@@ -45,7 +45,7 @@ boton.addEventListener('click', function() {
           let keyToken = localStorage.getItem('keyToken');
           keyToken = busqueda;
           localStorage.setItem('keyToken', keyToken);
-          window.location.href = "../../findings/findings.html"+'?key='+keyToken;
+          window.location.href = "/findings/findings.html"+'?key='+keyToken;
       }
   }
 );
@@ -156,12 +156,12 @@ function mostrarHistorial() {
 
       var itemLogo = document.createElement("img");
       itemLogo.className = "search-respuesta-item-logo";
-      itemLogo.src = "../../assets/history-svgrepo-com.svg";
+      itemLogo.src = "/assets/history-svgrepo-com.svg";
 
       var nuevoP = document.createElement("a");
       nuevoP.className = "search-respuesta-item-text";
       nuevoP.textContent = element;
-      nuevoP.href = "../../findings/findings.html"+'?key='+element;
+      nuevoP.href = "/findings/findings.html"+'?key='+element;
 
       nuevoPContenedor.appendChild(itemLogo);
       nuevoPContenedor.appendChild(nuevoP);
@@ -188,7 +188,7 @@ function mostrarCoincidencias(coincidencias) {
 
       var itemLogo = document.createElement("img");
       itemLogo.className = "search-respuesta-item-logo";
-      itemLogo.src = "../../assets/search-svgrepo-com.svg";
+      itemLogo.src = "/assets/search-svgrepo-com.svg";
 
       var nuevoP = document.createElement("a");
       nuevoP.className = "search-respuesta-item-text";
