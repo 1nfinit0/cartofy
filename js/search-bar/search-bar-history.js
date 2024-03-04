@@ -203,7 +203,7 @@ function mostrarCoincidencias(coincidencias) {
       var nuevoP = document.createElement("a");
       nuevoP.className = "search-respuesta-item-text";
       nuevoP.textContent = element.titulo;
-      nuevoP.href = "#";
+      nuevoP.href = baseURL+"map-view/map.html"+'?key='+element.id;
 
       nuevoPContenedor.appendChild(itemLogo);
       nuevoPContenedor.appendChild(nuevoP);

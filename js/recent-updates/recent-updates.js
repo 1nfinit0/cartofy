@@ -7,8 +7,9 @@ const ultimosContent = document.getElementsByClassName('ultimos-content')[0];
 
 //Iteración de los últimos 4 elementos
 recentUpdates.forEach((update) => {
-  const card = document.createElement('div');
+  const card = document.createElement('a');
   card.classList.add('card');
+  card.href = `./map-view/map.html?key=${update.id}`;
   card.style.backgroundImage = `url("${update.img}")`;
   card.innerHTML = `
     <div class="card-text">
@@ -22,7 +23,7 @@ recentUpdates.forEach((update) => {
 const cardMore = document.createElement('div');
 cardMore.classList.add('card-more');
 cardMore.innerHTML = `
-  <a href="#"></a>
+  <a href="#"></a
   <h3>Últimas contribuciones</h3>
 `;
 ultimosContent.appendChild(cardMore);

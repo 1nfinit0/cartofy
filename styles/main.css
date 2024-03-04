@@ -427,6 +427,10 @@ body main .chip-recientes-container .ultimos-container .ultimos-content .card {
   align-items: flex-end;
   overflow: hidden;
 }
+body main .chip-recientes-container .ultimos-container .ultimos-content .card:hover {
+  transform: scale(0.95);
+  transition: transform 0.5s ease;
+}
 body main .chip-recientes-container .ultimos-container .ultimos-content .card .card-text {
   width: 100%;
   height: 50px;
