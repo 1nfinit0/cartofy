@@ -21,7 +21,7 @@ function renderMatches(matches) {
 
     var a = document.createElement('a');
       a.className = 'match-link';
-      a.href = '../../../map-view/map.html?key='+match.id;
+      a.href = '../map-view/map.html?key='+match.id;
       a.innerHTML = `<img src="${match.img}" alt="${match.titulo}" class="match-img">`+
                     `<div class="match-tittle"><h2 class="match-title">${match.titulo}</h2></div>`+
                     `<p class="match-description">${match.descripcion}</p>`;
