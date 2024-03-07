@@ -166,7 +166,7 @@ body header .search .search-container .search-respuesta .search-respuesta-item .
 }
 body main {
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   background-color: #222222;
   position: relative;
   overflow: hidden;
@@ -235,4 +235,8 @@ body main .loading-page .loading-label {
   font-size: 2rem;
   color: white;
   text-shadow: 1px 1px 5px rgb(0, 0, 0);
+}
+/* De acuerdo a los estilos de leaflet se aplica el margin top a los estilos heredados del control de zoom */
+.leaflet-control-zoom {
+  margin-top: 70px !important;
 }

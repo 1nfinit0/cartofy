@@ -10,9 +10,12 @@ var map = L.map('map', {
 var defaultLayer = L.tileLayer.provider('Stadia.AlidadeSmoothDark').addTo(map);
 
 L.control.zoom({
-  position: 'bottomright'
+  position: 'topright'
 }).addTo(map);
 
+L.control.attribution({
+  position: 'bottomright'
+}).addTo(map);
 
 
 var geojsonMarkerOptions = {
