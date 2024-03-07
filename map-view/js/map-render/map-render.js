@@ -7,7 +7,7 @@ var map = L.map('map', {
     attributionControl: false,
 });
 
-var defaultBase = L.tileLayer.provider('Stadia.AlidadeSmoothDark').addTo(map);
+var defaultLayer = L.tileLayer.provider('Stadia.AlidadeSmoothDark').addTo(map);
 
 L.control.zoom({
   position: 'bottomright'
