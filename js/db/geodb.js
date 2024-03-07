@@ -6,9 +6,9 @@ export const geodb = [
     fuente: 'INEI 2022',
     keyword: ['peru', 'limite', 'frontera', 'boundaries', 'internacional', 'politico', 'ign', 'inei'],
     categoria: 3,
-    img: 'https://raw.githubusercontent.com/1nfinit0/geospatial-repo/master/db/category/political-geography/peru-limite-internacional/peru-limite-internacional.jpg',
-    data: 'https://raw.githubusercontent.com/1nfinit0/geospatial-repo/master/db/category/political-geography/peru-limite-internacional/peru-limite-internacional.js',
-    descarga: {shp: 'https://github.com/1nfinit0/geospatial-repo/blob/master/db/category/political-geography/peru-limite-internacional/peru-limite-internacional-shp.zip'}
+    img: 'https://raw.githubusercontent.com/1nfinit0/geospatial-db/master/db/category/political-geography/peru-limite-internacional/peru-limite-internacional.jpg',
+    data: 'https://media.githubusercontent.com/media/1nfinit0/geospatial-db/master/db/category/political-geography/peru-limite-internacional/peru-limite-internacional.geojson',
+    descarga: {shp: 'https://github.com/1nfinit0/geospatial-db/blob/master/db/category/political-geography/peru-limite-internacional/peru-limite-internacional-shp.zip'}
   },
   {
     id: 2,
@@ -17,9 +17,9 @@ export const geodb = [
     fuente: 'INEI 2022',
     keyword: ['peru', 'limite', 'departamentos', 'lima', 'departamental', 'regiones', 'regional'],
     categoria: 3,
-    img: 'https://raw.githubusercontent.com/1nfinit0/geospatial-repo/master/db/category/political-geography/peru-limite-departamental/peru-limite-departamental.jpg',
-    data: 'https://raw.githubusercontent.com/1nfinit0/geospatial-repo/master/db/category/political-geography/peru-limite-departamental/peru-limite-departamental.js',
-    descarga: {shp: 'https://github.com/1nfinit0/geospatial-repo/blob/master/db/category/political-geography/peru-limite-departamental/peru-limite-departamental-shp.zip'}
+    img: 'https://raw.githubusercontent.com/1nfinit0/geospatial-db/master/db/category/political-geography/peru-limite-departamental/peru-limite-departamental.jpg',
+    data: 'https://media.githubusercontent.com/media/1nfinit0/geospatial-db/master/db/category/political-geography/peru-limite-departamental/peru-limite-departamental.geojson',
+    descarga: {shp: 'https://github.com/1nfinit0/geospatial-db/blob/master/db/category/political-geography/peru-limite-departamental/peru-limite-departamental-shp.zip'}
   },
   {
     id: 3,
@@ -28,9 +28,9 @@ export const geodb = [
     fuente: 'INEI 2017',
     keyword: ['peru', 'limite', 'provincial', 'provincias', 'provincia', 'region', 'regionales'],
     categoria: 3,
-    img: 'https://raw.githubusercontent.com/1nfinit0/geospatial-repo/master/db/category/political-geography/peru-limites-provinciales/peru-limites-provinciales.jpg',
-    data: 'https://raw.githubusercontent.com/1nfinit0/geospatial-repo/master/db/category/political-geography/peru-limites-provinciales/peru-limites-provinciales.js',
-    descarga: {shp: 'https://github.com/1nfinit0/geospatial-repo/blob/master/db/category/political-geography/peru-limites-provinciales/peru-limites-provinciales-shp.zip'}
+    img: 'https://raw.githubusercontent.com/1nfinit0/geospatial-db/master/db/category/political-geography/peru-limites-provinciales/peru-limites-provinciales.jpg',
+    data: 'https://media.githubusercontent.com/media/1nfinit0/geospatial-db/master/db/category/political-geography/peru-limites-provinciales/peru-limites-provinciales.geojson',
+    descarga: {shp: 'https://github.com/1nfinit0/geospatial-db/blob/master/db/category/political-geography/peru-limites-provinciales/peru-limites-provinciales-shp.zip'}
   },
   {
     id: 4,
@@ -39,9 +39,9 @@ export const geodb = [
     fuente: 'INEI 2017',
     keyword: ['peru', 'limite', 'distrital', 'lima', 'distritos', 'distrito', 'municipalidad', 'municipios'],
     categoria: 3,
-    img: 'https://raw.githubusercontent.com/1nfinit0/geospatial-repo/master/db/category/political-geography/peru-limites-distritales/peru-limites-distritales.jpg',
-    data: 'https://raw.githubusercontent.com/1nfinit0/geospatial-repo/master/db/category/political-geography/peru-limites-distritales/peru-limites-distritales.js',
-    descarga: {shp: 'https://github.com/1nfinit0/geospatial-repo/blob/master/db/category/political-geography/peru-limites-distritales/peru-limites-distritales-shp.zip'}
+    img: 'https://raw.githubusercontent.com/1nfinit0/geospatial-db/master/db/category/political-geography/peru-limites-distritales/peru-limites-distritales.jpg',
+    data: 'https://media.githubusercontent.com/media/1nfinit0/geospatial-db/master/db/category/political-geography/peru-limites-distritales/peru-limites-distritales.geojson',
+    descarga: {shp: 'https://github.com/1nfinit0/geospatial-db/blob/master/db/category/political-geography/peru-limites-distritales/peru-limites-distritales-shp.zip'}
   },
   {
     id: 5,
@@ -50,8 +50,8 @@ export const geodb = [
     fuente: 'INEI 2017',
     keyword: ['peru', 'red', 'rios', 'agua', 'hidrografica', 'hidrografia', 'lagos', 'lagunas', 'cuenca'],
     categoria: 1,
-    img: 'https://raw.githubusercontent.com/1nfinit0/geospatial-repo/master/db/category/physical-geography/peru-red-hidrografica/peru-red-hidrografica.jpg',
-    data: 'https://raw.githubusercontent.com/1nfinit0/geospatial-repo/master/db/category/physical-geography/peru-red-hidrografica/peru-red-hidrografica.js',
-    descarga: {shp: 'https://github.com/1nfinit0/geospatial-repo/blob/master/db/category/physical-geography/peru-red-hidrografica/peru-red-hidrografica-shp.zip'}
+    img: 'https://raw.githubusercontent.com/1nfinit0/geospatial-db/master/db/category/physical-geography/peru-red-hidrografica/peru-red-hidrografica.jpg',
+    data: 'https://media.githubusercontent.com/media/1nfinit0/geospatial-db/master/db/category/physical-geography/peru-red-hidrografica/peru-red-hidrografica.geojson',
+    descarga: {shp: 'https://github.com/1nfinit0/geospatial-db/blob/master/db/category/physical-geography/peru-red-hidrografica/peru-red-hidrografica-shp.zip'}
   },
 ]

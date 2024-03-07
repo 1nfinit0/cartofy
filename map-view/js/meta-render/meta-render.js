@@ -6,13 +6,16 @@ const parametroUrl = urlParams.get('key');
 import { geodb } from '../../../js/db/geodb.js';
 
 //Función que devuelve el objeto que coincide con el parámetro de búsqueda
-function filtrarPorId(id) {
-  return geodb.find(geodb => geodb.id == id);
+export function filtrarPorId(id) {
+  const obj = geodb.find(geodb => geodb.id == id);
+  if (!obj) {
+    return null;
+  }
+  return obj;
 }
 
 //Obteniendo el objeto que coincide con el parámetro de búsqueda
 const match = filtrarPorId(parametroUrl);
-console.log(match);
 
 // Cambiar el título de la página según el parámetro de consulta
 if (match) {
@@ -23,6 +26,6 @@ if (match) {
 
 // Trigger por si no existe parámetro
 const main = document.getElementsByTagName('main')[0];
-if (!match) {
+if (!match || match == null) {
   main.innerHTML = `<h1>No se encontraron resultados</h1>`;
 }

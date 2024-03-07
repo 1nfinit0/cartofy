@@ -3,6 +3,7 @@ const section = document.getElementsByTagName('section')[0];
 const navButton = document.getElementById('toogle-nav');
 const sectionButton = document.getElementById('toogle-section');
 
+// Listeners con condicional ternario
 navButton.addEventListener('click', () => {
   nav.style.transform = nav.style.transform === 'translateX(0px)' ? 'translateX(-100%)' : 'translateX(0px)';
 });

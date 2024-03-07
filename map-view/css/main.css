@@ -172,10 +172,14 @@ body main {
   overflow: hidden;
 }
 body main h1 {
-  color: rgba(255, 255, 255, 0.582);
+  position: fixed;
+  z-index: 999;
+  color: rgba(255, 0, 0, 0.908);
   font-size: 2rem;
   text-align: center;
-  margin-top: 10%;
+  width: 100%;
+  margin-top: calc(100vh / 2);
+  text-shadow: 5px 5px 15px rgb(0, 0, 0);
 }
 body main nav {
   width: 300px;
@@ -186,11 +190,13 @@ body main nav {
   bottom: 0;
   transition: transform .3s ease-out;
   transform: translateX(-100%);
+  z-index: 999;
 }
 body main .button-shape {
   background-color: #fff0;
   position: absolute;
   right: -27px;
+  top: calc(50% - 60px);
   border-left: 25px solid #ffffff9f;
   border-top: 12px solid transparent;
   border-bottom: 12px solid transparent;
@@ -206,10 +212,27 @@ body main section {
   bottom: 0;
   transition: transform .3s ease-out;
   transform: translateY(100%);
+  z-index: 999;
 }
 body main section #toogle-section {
-  right: 23px;
+  right: 50%;
   rotate: 270deg;
   top: -50px;
   height: 75px;
+}
+body main .loading-page {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 9999;
+  background-color: #a6a9e375;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body main .loading-page .loading-label {
+  font-size: 2rem;
+  color: white;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
