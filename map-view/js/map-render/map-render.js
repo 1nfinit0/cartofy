@@ -13,10 +13,6 @@ L.control.zoom({
   position: 'topright'
 }).addTo(map);
 
-L.control.attribution({
-  position: 'bottomright'
-}).addTo(map);
-
 
 var geojsonMarkerOptions = {
   fillColor: "#4444f54a",
@@ -26,26 +22,19 @@ var geojsonMarkerOptions = {
   fillOpacity: 0.8
 };
 
-// Obtener el parámetro de consulta de la URL
-const urlParams = new URLSearchParams(window.location.search);
-const parametroUrl = urlParams.get('key');
+import { match } from '../global-match-feature/global.js';
+import { obtenerFeature } from '../global-match-feature/global.js'
+obtenerFeature(match.data).then((jsonData) => {
+  var layer = L.geoJSON(jsonData, geojsonMarkerOptions);
+  layer.addTo(map);
+  const loadingPage = document.getElementsByClassName('loading-page')[0];
+  loadingPage.style.display = 'none';
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
 
-import { filtrarPorId } from '../meta-render/meta-render.js';
-
-const match = filtrarPorId(parametroUrl);
-
-if (match != null) {
-  var data = match.data;
-
-  async function obtenerJSONDesdeURL(url) {
-    const response = await fetch(url); // Realizar solicitud HTTP
-    const jsonData = await response.json(); // Convertir la respuesta en JSON
-    // Devolver el objeto JSON
-    return jsonData;
-  }
-  const feature = await obtenerJSONDesdeURL(data);
-  var featureLayer = L.geoJson(feature, geojsonMarkerOptions).addTo(map);
-
+if (match == null) {
   const loadingPage = document.getElementsByClassName('loading-page')[0];
   loadingPage.style.display = 'none';
 }
