@@ -1,38 +1,79 @@
-var boundary = [-81.3899688720703, -18.4412956237793, -68.5886001586914, 0.0298568718135357];
-
-var map = L.map('map', {
-    center: [(boundary[1] + boundary[3]) / 2, (boundary[0] + boundary[2]) / 2],
-    zoom: 5,
-    zoomControl: false,
-    attributionControl: false,
-});
-
-var defaultLayer = L.tileLayer.provider('Stadia.AlidadeSmoothDark').addTo(map);
-
-L.control.zoom({
-  position: 'topright'
-}).addTo(map);
-
+import { match } from '../global-match-feature/global.js';
+import { obtenerFeature } from '../global-match-feature/global.js'
 
 var geojsonMarkerOptions = {
   fillColor: "#4444f54a",
   color: "#3388ffab",
-  weight: 1,
+  weight: 0.8,
   opacity: 1,
-  fillOpacity: 0.8
+  fillOpacity: 0.5,
 };
 
-import { match } from '../global-match-feature/global.js';
-import { obtenerFeature } from '../global-match-feature/global.js'
 obtenerFeature(match.data).then((jsonData) => {
-  var layer = L.geoJSON(jsonData, geojsonMarkerOptions);
-  layer.addTo(map);
+  var jsonLayer = L.geoJSON(jsonData, geojsonMarkerOptions);
+
+  var boundary = jsonLayer.getBounds().getCenter();
+
+  var map = L.map('map', {
+    center: [boundary.lat, boundary.lng],
+    zoomControl: false,
+    attributionControl: false,
+  });
+
+  var defaultLayer = L.tileLayer.provider('Stadia.AlidadeSmoothDark');
+  defaultLayer.addTo(map);
+
+  L.control.zoom({
+    position: 'topright'
+  }).addTo(map);
+
+
   const loadingPage = document.getElementsByClassName('loading-page')[0];
   loadingPage.style.display = 'none';
+  jsonLayer.addTo(map);
+  map.fitBounds(jsonLayer.getBounds());
+
+  let selectedFeature;
+
+  jsonLayer.on('click', function (e) {
+    //Seleccionando un elemento específico de jsonLayer
+    selectedFeature = e.layer;
+    var item = selectedFeature.feature.properties;
+    console.log(item);
+
+    var key = Object.keys(selectedFeature.feature.properties)
+
+    //Cambiando estilos de acuerdo a la selección
+    jsonLayer.setStyle(geojsonMarkerOptions)
+    selectedFeature.setStyle({ opacity: 1, width: 3, fillColor: "#0080FF" });
+
+    //Mostrando selección en la tabla atributiva:
+    const table = document.getElementsByClassName('rwd-table')[0];
+    const tBodyExist = document.getElementsByClassName('selected-tbody')[0];
+
+    if (tBodyExist) {
+      tBodyExist.remove();
+    }
+
+    const tbody = table.createTBody();
+    tbody.classList.add('selected-tbody');
+    const row = tbody.insertRow();
+
+    key.forEach(key => {
+      const cell = row.insertCell();
+      cell.textContent = item[key];
+    });
+    
+    table.prepend(tbody);    
+  });
+
+
+
+
 })
-.catch((error) => {
-  console.error('Error:', error);
-});
+  .catch((error) => {
+    console.error('Error:', error);
+  });
 
 if (match == null) {
   const loadingPage = document.getElementsByClassName('loading-page')[0];

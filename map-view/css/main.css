@@ -9,6 +9,7 @@
 }
 html {
   scroll-behavior: smooth;
+  background-color: #222222;
 }
 body::-webkit-scrollbar {
 	width: 12px;
@@ -21,8 +22,6 @@ body::-webkit-scrollbar-thumb {
 }
 body {
   width: 100%;
-  background-color: #000;
-  background-image: linear-gradient(to bottom, #000 0%, #3a0064 100%);
   overflow: hidden;
 }
 body header {
@@ -189,31 +188,24 @@ body nav {
   width: 300px;
   max-width: calc(100vw - 10%);
   height: calc(100dvh - 60px);
-  background-color: #2b2b2b9f;
+  background-color: #2b2b2b71;
   position: absolute;
-  bottom: 0;
+  top: 60px;
   transition: transform .3s ease-out;
   transform: translateX(-100%);
   z-index: 900;
-  padding: 5px;
+  backdrop-filter: blur(7px);
 }
 body section {
   width: 100dvw;
   height: 300px;
   max-height: calc(100vh - 90px);
-  background-color: #3a006491;
+  background-color: #000000a8;
   position: absolute;
   bottom: 0;
   transition: transform .3s ease-out;
   transform: translateY(100%);
   z-index: 900;
-  
-}
-body section #toogle-section {
-  right: 50%;
-  rotate: 270deg;
-  top: -50px;
-  height: 75px;
 }
 body .button-shape {
   background-color: #fff0;
@@ -226,31 +218,43 @@ body .button-shape {
   width: 0;
   height: 70px;
 }
+body section #toogle-section {
+  right: 50%;
+  rotate: 270deg;
+  top: -50px;
+  height: 75px;
+}
 body nav .feature-info-container {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 3%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
 }
 body nav .feature-info-container .feature-info-tittle {
-  font-size: 2rem;
+  font-size: 1.6rem;
+  font-weight: 800;
   color: white;
   text-shadow: 1px 1px 5px rgb(0, 0, 0);
   margin: 20px 0;
   text-align: center;
 }
 body nav .feature-info-container .feature-info-img {
-  width: 80%;
+  width: 60%;
   display: flex;
   justify-content: center;
+  aspect-ratio: 16/9;
 }
 body nav .feature-info-container .feature-info-img img {
   width: 80%;
 }
 body nav .feature-info-container .feature-info-description {
-  font-size: 1.5rem;
-  color: rgb(228, 228, 228);
+  font-size: 1.4rem;
+  color: rgb(168, 168, 168);
   text-shadow: 1px 1px 5px rgb(0, 0, 0);
   text-align: justify;
   margin: 20px 0;
@@ -266,7 +270,7 @@ body nav .feature-info-container .feature-info-hr {
   border: none;
   height: 1px;
   background-color: rgb(0, 115, 160);
-  margin: 10px 0;
+  margin: 10px 0 20px 0;
 }
 body nav .feature-info-container .feature-info-properties {
   width: 100%;
@@ -274,21 +278,21 @@ body nav .feature-info-container .feature-info-properties {
   flex-direction: column;
 }
 body nav .feature-info-container .feature-info-properties .feature-info-key {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: rgb(199, 199, 199);
   text-shadow: 1px 1px 5px rgb(0, 0, 0);
   font-weight: bold;
 }
 body nav .feature-info-container .feature-info-properties .feature-info-key-value {
-  font-size: 1.5rem;
-  color: white;
+  font-size: 1.4rem;
+  color: rgb(214, 214, 214);
   text-shadow: 1px 1px 5px rgb(0, 0, 0);
   font-weight: 1;
   text-align: end;
   margin-bottom: 10px;
 }
 body nav .feature-info-container .feature-info-properties .feature-info-descarga {
-  width: 100px;
+  width: 80px;
   height: 30px; 
   background-color: #a30000; 
   border-radius: 10px;
@@ -296,7 +300,8 @@ body nav .feature-info-container .feature-info-properties .feature-info-descarga
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 20px auto;
+  font-size: 1.2rem;
 }
 body section .table-container {
   width: 100%;
@@ -309,10 +314,11 @@ body section .feature-tittle {
 }
 body section .feature-tittle h2 {
   color: #62eef8;
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-family: monospace;
   font-weight: bold;
-  padding-top: 6px;
+  padding: 0 10px;
+  margin: 5px 0;
 }
 body section .rwd-table {
   border-collapse: collapse;
@@ -324,33 +330,37 @@ body section .rwd-table tr {
   height: auto;
 }
 body section .rwd-table tr:nth-child(even) td {
-  background-color: #3a00648f;
-  
+  background-color: #3b3b3bbd;
 }
 body section .rwd-table tr:nth-child(odd) td {
   background-color: #2b2b2b85;
 }
 body section .rwd-table tr th, td {
-  border-left: 1px solid rgb(131, 131, 131);
-  padding: 8px;
+  border-left: 1px solid rgb(83, 83, 83);
+  padding: 5px;
 }
 body section .rwd-table tr th {
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: rgb(233, 212, 21);
   white-space: nowrap;
   min-width: auto;
-  background-color: #000000a8;  
 }
 body section .rwd-table tr td {
-  font-size: 1.5rem;
-  color: white;
+  font-size: 1.1rem;
+  color: rgb(190, 190, 190);
   width: auto;
   max-width: 250px;
   height: 20px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.selected-tbody {
+  background-color: #e5ff00;
+}
+.selected-tbody tr td {
+  color: #000000 !important;
 }
 body section .table-alert {
   color: #ffffff;

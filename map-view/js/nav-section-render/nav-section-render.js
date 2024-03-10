@@ -15,8 +15,8 @@ var categorias = {
 obtenerFeature(match.data).then((jsonData) => {
   const nav = document.getElementsByTagName('nav')[0];
   const navContent = document.createElement('div');
+  navContent.className = 'feature-info-container';
   navContent.innerHTML = `
-    <div class="feature-info-container">
       <h1 class="feature-info-tittle">${(match.titulo)}</h1>
       <div class="feature-info-img">
         <img src="${(match.img)}" alt="Feature image">
@@ -35,10 +35,8 @@ obtenerFeature(match.data).then((jsonData) => {
         <p class="feature-info-key-value">${(jsonData.type)}</p>
         <h3 class="feature-info-key">Descarga:</h3>
         <a href="${(match.descarga.shp)}" class="feature-info-descarga">SHP</a>
-      </div>
-    </div>`;
+      </div>`;
   nav.appendChild(navContent);
-  console.log(jsonData);
 
   const tableContainer = document.getElementsByClassName('table-container')[0];
   const tittleContainer = document.createElement('div');
