@@ -7,7 +7,7 @@ const sectionButton = document.getElementById('toogle-section');
 document.addEventListener("DOMContentLoaded", function() {
   // Listeners con condicional ternario
 navButton.addEventListener('click', () => {
-  nav.style.transform = nav.style.transform === 'translateX(0px)' ? 'translateX(-100%)' : 'translateX(0px)';
+  nav.style.transform = nav.style.transform === 'translateX(-100%)' ? 'translateX(0px)' : 'translateX(-100%)';
 });
 sectionButton.addEventListener('click', () => {
   section.style.transform = section.style.transform === 'translateY(0px)' ? 'translateY(100%)' : 'translateY(0px)';

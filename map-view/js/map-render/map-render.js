@@ -32,6 +32,9 @@ obtenerFeature(match.data).then((jsonData) => {
   loadingPage.style.display = 'none';
   jsonLayer.addTo(map);
   map.fitBounds(jsonLayer.getBounds());
+  const nav = document.getElementsByTagName('nav')[0];
+  nav.style.transform = 'translateX(0%)';
+
 
   let selectedFeature;
 
@@ -39,13 +42,12 @@ obtenerFeature(match.data).then((jsonData) => {
     //Seleccionando un elemento específico de jsonLayer
     selectedFeature = e.layer;
     var item = selectedFeature.feature.properties;
-    console.log(item);
 
     var key = Object.keys(selectedFeature.feature.properties)
 
     //Cambiando estilos de acuerdo a la selección
     jsonLayer.setStyle(geojsonMarkerOptions)
-    selectedFeature.setStyle({ opacity: 1, width: 3, fillColor: "#0080FF" });
+    selectedFeature.setStyle({ opacity: 1, width: 3, fillColor: "#e5ff00" });
 
     //Mostrando selección en la tabla atributiva:
     const table = document.getElementsByClassName('rwd-table')[0];
