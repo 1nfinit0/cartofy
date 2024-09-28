@@ -68,7 +68,6 @@ obtenerFeature(match.data).then((jsonData) => {
   });
 
   tableContainer.appendChild(table);
-})
-.catch((error) => {
+}).catch((error) => {
   console.error('Error:', error);
 });
