@@ -45,7 +45,7 @@ export const geodb = [
     src: 'CRS84',
     img: 'https://raw.githubusercontent.com/1nfinit0/geospatial-db/master/db/category/political-geography/peru-limites-distritales/peru-limites-distritales.jpg',
     data: 'https://media.githubusercontent.com/media/1nfinit0/geospatial-db/master/db/category/political-geography/peru-limites-distritales/peru-limites-distritales.geojson',
-    descarga: {shp: 'https://github.com/1nfinit0/geospatial-db/raw/master/db/category/political-geography/peru-limites-distritales/peru-limites-distritales-shp.zip'}
+    descarga: {shp: 'https://github.com/1nfinit0/geospatial-db/raw/master/db/category/political-geography/peru-limites-distritales/peru-limites-distritales.zip'}
   },
   {
     id: 5,
