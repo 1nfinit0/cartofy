@@ -66,8 +66,8 @@ export const geodb = [
     fuente: 'IBGE 2021',
     keyword: ['sudamerica', 'paises', 'countries', 'limite', 'frontera', 'boundaries', 'internacional', 'politico', 'ibge'],
     categoria: 1,
-    img: 'https://raw.githubusercontent.com/1nfinit0/geospatial-repo/master/db/category/political-geography/sudamerica-paises/sudamerica-paises.png',
-    data: 'https://raw.githubusercontent.com/1nfinit0/geospatial-repo/master/db/category/political-geography/sudamerica-paises/sudamerica-paises.geojson',
-    descarga: {shp: 'https://github.com/1nfinit0/geospatial-repo/blob/master/db/category/political-geography/sudamerica-paises/sudamerica-paises.zip'}
+    img: 'https://raw.githubusercontent.com/1nfinit0/geospatial-db/master/db/category/political-geography/sudamerica-paises/sudamerica-paises.png',
+    data: 'https://raw.githubusercontent.com/1nfinit0/geospatial-db/master/db/category/political-geography/sudamerica-paises/sudamerica-paises.geojson',
+    descarga: {shp: 'https://github.com/1nfinit0/geospatial-db/raw/master/db/category/political-geography/sudamerica-paises/sudamerica-paises.zip'}
   },
 ]
