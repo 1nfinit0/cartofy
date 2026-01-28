@@ -157,10 +157,10 @@ export const geodb = [
       "cuenca",
     ],
     categoria: 1,
-    img: "https://raw.githubusercontent.com/1nfinit0/geospatial-repo/master/db/category/physical-geography/peru_cuencas_hidrograficas/peru_cuencas_hidrograficas.png",
-    data: "https://raw.githubusercontent.com/1nfinit0/geospatial-repo/master/db/category/physical-geography/peru_cuencas_hidrograficas/peru_cuencas_hidrograficas.geojson",
+    img: "https://raw.githubusercontent.com/1nfinit0/geospatial-db/refs/heads/master/db/category/physical-geography/peru_cuencas_hidrograficas/peru_cuencas_hidrograficas.png",
+    data: "https://raw.githubusercontent.com/1nfinit0/geospatial-db/refs/heads/master/db/category/physical-geography/peru_cuencas_hidrograficas/peru_cuencas_hidrograficas.geojson",
     descarga: {
-      shp: "https://github.com/1nfinit0/geospatial-repo/blob/master/db/category/physical-geography/peru_cuencas_hidrograficas/peru_cuencas_hidrograficas.zip",
+      shp: "https://github.com/1nfinit0/geospatial-db/raw/refs/heads/master/db/category/physical-geography/peru_cuencas_hidrograficas/peru_cuencas_hidrograficas.zip",
     },
   },
 ];
